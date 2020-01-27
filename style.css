@@ -5,6 +5,11 @@ body {
    
   }
 
+#city{
+    width:100%;
+    
+}
+
   .jumbotron {
     text-align: center;
     font-weight: bold;
