@@ -7,7 +7,7 @@ body {
 
 #city{
     width:100%;
-    
+
 }
 
   .jumbotron {
@@ -18,4 +18,12 @@ body {
     border-radius: 0;
     border-bottom: 10px solid black;
     border-top: 10px solid black;
+  }
+
+  .col-sm-12{
+      background-color: darkseagreen;
+  }
+
+  .weather-future{
+      background-color: dodgerblue;
   }
