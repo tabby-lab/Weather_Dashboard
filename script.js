@@ -21,7 +21,7 @@ console.log(cityArr)
 
 
 
-    let forecastURL = "http://api.openweathermap.org/data/2.5/forecast?appid=" + apiKey + "&q=";
+    // let forecastURL = "http://api.openweathermap.org/data/2.5/forecast?appid=" + apiKey + "&q=";
 
 
     $("#seachBtn").on("click", function () {
@@ -45,7 +45,7 @@ console.log(cityArr)
             var row = $("<div class='row'>")
             var col = $("<div class='col-sm-12'>")
             var img = $("<img>")
-            img.attr("src", "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
+            img.attr("src", "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
             var h3 = $("<h3>")
             h3.append(response.name, " (" + currentDate + ")", img)
             var p = $("<p>")
@@ -67,7 +67,7 @@ console.log(cityArr)
             var lat = response.coord.lat
             var lon = response.coord.lon
             $.ajax({
-                url: "http://api.openweathermap.org/data/2.5/uvi/forecast?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon,
+                url: "https://api.openweathermap.org/data/2.5/uvi/forecast?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon,
                 method: "GET"
             }).then(function (response2) {
                 const uvIndex = response2[0].value
@@ -77,7 +77,7 @@ console.log(cityArr)
 
 
                 $.ajax({
-                    url: "http://api.openweathermap.org/data/2.5/forecast?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon + "&units=imperial",
+                    url: "https://api.openweathermap.org/data/2.5/forecast?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon + "&units=imperial",
                     method: "GET"
                 }).then(function (response3) {
                     console.log(response3)
@@ -86,7 +86,7 @@ console.log(cityArr)
                     for (let i = 1; i < forecasts.length && i < 6; i++) {
 
                         $(".forecast-row").append(`<div class='col weather-future' data-id=${i}>Temperature: ${Math.round(forecasts[i].main.temp)}</div>
-                        <img src=${`http://openweathermap.org/img/w/${forecasts[i].weather[0].icon}.png`}></img>
+                        <img src=${`https://openweathermap.org/img/w/${forecasts[i].weather[0].icon}.png`}></img>
                         `)
                     }
 
