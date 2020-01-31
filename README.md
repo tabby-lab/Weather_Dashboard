@@ -5,7 +5,7 @@ uv index, wind speed, and humidity.
 It will also allow the user to view a 5 day forecast for the city that they search.
 
 # Link
-Put github link here
+https://tabby-lab.github.io/Weather_Dashboard/
 
 # Credit
 Calvin Carter, Amanda and Mark, Phil Loy, youtube, 
